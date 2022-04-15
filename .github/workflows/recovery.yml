@@ -1,4 +1,4 @@
-name: Building shrpmkkjj
+name: Building shrpmkkjjjl
 
 on:
 #  release:
@@ -15,10 +15,10 @@ on:
 
 env:
   MANIFEST: https://github.com/SHRP/manifest.git
-  MANIFEST_BRANCH: v3_9.0
-  DEVICE: ginkgo
-  DT_LINK: https://github.com/Seifood/android_device_xiaomi_ginkgo.git
-  DT_PATH: device/xiaomi/ginkgo
+  MANIFEST_BRANCH: v3_10.0
+  DEVICE: surya
+  DT_LINK: https://github.com/Seifood/device_xiaomi_surya.git
+  DT_PATH: device/xiaomi/surya
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
