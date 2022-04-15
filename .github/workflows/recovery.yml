@@ -15,11 +15,11 @@ on:
 
 env:
   MANIFEST: https://github.com/SHRP/manifest.git
-  MANIFEST_BRANCH: v3_11.0
-  DEVICE: lisa
-  DT_LINK: https://github.com/Seifood/device_xiaomi_lisa.git
-  DT_PATH: device/xiaomi/lisa
-  TARGET: bootimage
+  MANIFEST_BRANCH: v3_9.0
+  DEVICE: ginkgo
+  DT_LINK: https://github.com/Seifood/android_device_xiaomi_ginkgo.git
+  DT_PATH: device/xiaomi/ginkgo
+  TARGET: recoveryimage
   TZ: Asia/Kolkata
 
 jobs:
@@ -57,7 +57,7 @@ jobs:
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&lunch twrp_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && rm -rf .repo && mka $TARGET
+              . build/envsetup.sh &&lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && rm -rf .repo && mka $TARGET
              
        - uses: actions/upload-artifact@v2
          with:
