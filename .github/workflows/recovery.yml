@@ -1,4 +1,4 @@
-name: Building reconvery
+name: Building shrpmkkjj
 
 on:
 #  release:
@@ -16,11 +16,9 @@ on:
 env:
   MANIFEST: https://github.com/SHRP/manifest.git
   MANIFEST_BRANCH: v3_11.0
-  DEVICE: odin
-  DT_LINK: https://github.com/jjhitel/device_xiaomi_odin-TWRP.git
-  DT_PATH: device/xiaomi/odin
-  DT_LINKK: https://github.com/nebrassy/device_xiaomi_sm8350-common-TWRP.git
-  DT_PATHH: device/xiaomi/sm8350-common
+  DEVICE: lisa
+  DT_LINK: https://github.com/Seifood/device_xiaomi_lisa.git
+  DT_PATH: device/xiaomi/lisa
   TARGET: bootimage
   TZ: Asia/Kolkata
 
@@ -54,7 +52,7 @@ jobs:
              repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -j4
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
-             git clone $DT_LINKK --depth=1 --single-branch $DT_PATHH
+   
              
        - name: Build
          run: |
