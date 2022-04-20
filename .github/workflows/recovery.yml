@@ -1,4 +1,4 @@
-name: Building shrpmkkjjjl
+name: Building shrpmkkjjjluu7
 
 on:
 #  release:
@@ -14,12 +14,12 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://github.com/SHRP/manifest.git
-  MANIFEST_BRANCH: v3_10.0
-  DEVICE: surya
-  DT_LINK: https://github.com/Seifood/device_xiaomi_surya.git
-  DT_PATH: device/xiaomi/surya
-  TARGET: recoveryimage
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
+  MANIFEST_BRANCH: twrp-11
+  DEVICE: zeus
+  DT_LINK: https://github.com/Seifood/device_xiaomi_zeus-TWRP.git
+  DT_PATH: device/xiaomi/zeus
+  TARGET: bootimage
   TZ: Asia/Kolkata
 
 jobs:
